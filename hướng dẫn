@@ -1,0 +1,9 @@
+Share DLL giống Dm.dll không bị detect virus , tìm hình ảnh nhanh, có tìm pixel , muticolor , mutipixel , orc  không chiếm chuột . Có mã nguồn bằng c++ 
+xem command của dll 
+https://github.com/WallBre.../op/blob/master/include/libop.h
+Cách dùng tương tự dm.dll nhưng ít chức năng hơn dm 
+Trong release có sẵn 1 số examples của lua, python, vbs 
+examples autoit  : https://pastebin.com/5DE11hvf
+Các bạn install op = lệnh 
+regsvr32 op_x86.dll
+regsvr32 op_x64.dll
