@@ -1,0 +1,21 @@
+Local $OP = ObjCreate("op.opsoft")
+$test = $OP.Ver()
+$OP.UnBindWindow()
+;MsgBox($test, "OP Version là :", $test, 10)
+Run('Notepad')
+Sleep(1000)
+$Hwnd = $OP.FindWindow("", "Untitled - Notepad")
+ConsoleWrite('Current HWID :' & $Hwnd & @CRLF)
+$Hwnd1 = $OP.FindWindowEx($Hwnd,"Edit","")
+ConsoleWrite('Current HWID :' & $Hwnd1 & @CRLF)
+$op.Sleep(1000);
+$ret = $OP.BindWindow($hwnd1,"dx2","windows","windows",0)
+ConsoleWrite('Current bind :' & $ret & @CRLF)
+For $a = 60 To 90
+$OP.KeyPress($a)
+Next
+$OP.KeyPressChar("enter")
+$op.Sleep(1000);
+$OP.SendString($Hwnd1,"Hello OP DLL")
+ 
+$OP.UnBindWindow()
